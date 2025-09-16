@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="./STYLR.CSS">
+</head>
+<body>
+    <header>
+        <h1>Interactive Web Page</h1>
+        <p class="tagline">Explore these JavaScript-powered features</p>
+    </header>
+
+    <div class="container">
+        <div class="card counter-container">
+            <h2>Counter</h2>
+            <div class="counter-value" id="counterValue">0</div>
+            <div>
+                <button id="decrementBtn">-</button>
+                <button id="resetBtn">Reset</button>
+                <button id="incrementBtn">+</button>
+            </div>
+            <p class="instructions">Click the buttons to change the counter value. The color changes based on the value.</p>
+        </div>
+
+        <div class="card theme-switcher">
+            <h2>Theme Switcher</h2>
+            <p>Change the color theme of the page</p>
+            <div class="theme-buttons">
+                <button class="theme-btn default-theme" data-theme="default"></button>
+                <button class="theme-btn green-theme-btn" data-theme="green"></button>
+                <button class="theme-btn purple-theme-btn" data-theme="purple"></button>
+                <button class="theme-btn dark-theme-btn" data-theme="dark"></button>
+            </div>
+            <button id="resetTheme">Reset Theme</button>
+            <p class="instructions">Click on a color to change the theme. The reset button returns to the default theme.</p>
+        </div>
+
+        <div class="card list-container">
+            <h2>Interactive List</h2>
+            <input type="text" id="itemInput" placeholder="Enter a new item">
+            <button id="addItemBtn">Add Item</button>
+            <ul id="itemList"></ul>
+            <p class="instructions">Add items to the list and remove them with the delete buttons. Press Enter to add items quickly.</p>
+        </div>
+
+        <div class="card">
+            <h2>Modal Popup</h2>
+            <p>Click the button below to open a modal dialog</p>
+            <button class="modal-btn" id="openModal">Open Modal</button>
+            <p class="instructions">The modal can be closed by clicking the X, pressing Escape, or clicking outside the modal.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form id="registration-form">
+            <div class="form-group" id="name-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+                <div class="error" id="name-error">Please enter a valid name (min 2 characters)</div>
+                <div class="success-text">Name is valid!</div>
+            </div>
+            
+            <div class="form-group" id="email-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <div class="error" id="email-error">Please enter a valid email address</div>
+                <div class="success-text">Email is valid!</div>
+            </div>
+            
+            <div class="form-group" id="password-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Create a password">
+                <div class="error" id="password-error">Password must be at least 8 characters with uppercase, lowercase, and number</div>
+                <div class="success-text">Password is strong!</div>
+            </div>
+            
+            <button type="submit" id="submit-btn">Register</button>
+            
+            <div id="form-message"></div>
+        </form>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <h2>Welcome to the Modal!</h2>
+            <p>This is a simple modal dialog created with HTML, CSS, and JavaScript.</p>
+            <p>You can close this modal by:</p>
+            <ul>
+                <li>Clicking the X button</li>
+                <li>Pressing the Escape key</li>
+                <li>Clicking anywhere outside the content</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created with HTML, CSS, and JavaScript</p>
+    </footer>
+
+    <script src="/STYLR.CSS"></script>
+</body>
+</html>
